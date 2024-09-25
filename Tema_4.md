@@ -234,7 +234,7 @@ print(f"Площадь: {result}")
 Данный код позволяет пользователю выбрать между двумя геометрическими фигурами (прямоугольник и треугольник), ввести необходимые параметры, и получить вычисленную площадь выбранной фигуры.
 ## Самостоятельная работа №1
 Дайте подробный комментарий для кода, написанного ниже. Комментарий нужен для каждой строчки кода, нужно описать что она делает. Не забудьте, что функции комментируются по-особенному.
-from datetime import datetime from math import sqrt
+`from datetime import datetime from math import sqrt
 def main(**kwargs):
 for key in kwargs.items():
 result = sqrt(key[1][0] ** 2 + key[1][1] ** 2) print(result)
@@ -246,7 +246,7 @@ four=[93, 53],
 five=[133, 15]
 )
 time_costs = datetime.now() - start_time
-print(f"Время выполнения программы - {time_costs}")
+print(f"Время выполнения программы - {time_costs}")`
 
 ```python
 print(bool(0))
