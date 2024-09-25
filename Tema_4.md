@@ -180,26 +180,74 @@ if __name__ == '__main__':
 ## Лабораторная работа №9
 Напишите программу, которая будет рассчитывать какой день недели будет через n-нное количество дней, которые укажет пользователь.
 ```python
-print('Hello\nworld')
+from datetime import datetime as dt
+from datetime import timedelta as td
+
+def main():
+    print(
+        f"Сегодня{dt.today().date()}. "
+        f"День недели - {dt.today().isoweekday()}"
+    )
+    n = int(input())
+    today = dt.today()
+    result = today + td(days=n)
+    print(
+        f"Через {n} дней будет {result.date()}"
+        f"День недели - {result.isoweekday()}"
+    )
+if __name__ == '__main__':
+    main()
 ```
 ### Результат.
-![image](https://github.com/user-attachments/assets/d1743975-abaa-429a-ad59-c80104c030eb)
+![image](https://github.com/user-attachments/assets/24f0cdbd-65ef-4daa-bec5-f781195de538)
+
 
 ## Выводы
-\n служит разделителем и переносом строки
+Скрипт импортирует модули datetime и timedelta из библиотеки datetime.
 ## Лабораторная работа №10
 Напишите программу с использованием глобальных переменных, которая будет считать площадь треугольника или прямоугольника в зависимости от того, что выберет пользователь. Получение всей необходимой информации реализовать через input(), а подсчет площадей выполнить при помощи функций. Результатом программы будет число, равное площади, необходимой фигуры.
 ```python
-x = 'Hello world'
-print(x[1], x[:5])
+global result
+def rectangle():
+    a = float(input("Ширина: "))
+    b = float(input("Высота: "))
+    global result
+    result = a*b
+def triangle():
+    a = float(input("Основание: "))
+    h = float(input("Высота: "))
+    global result
+    result = 0.5*a*h
+figure = input("1 - Прямоугольник, 2 - треугольник:")
+if figure == '1':
+    rectangle()
+elif figure == '2':
+    triangle()
+print(f"Площадь: {result}")
 ```
 ### Результат.
-![image](https://github.com/user-attachments/assets/bf73f911-97da-436a-88bc-8bb1ebec738a)
+![image](https://github.com/user-attachments/assets/c026ed22-3ccc-4c1e-ae22-500bd577279e)
+![image](https://github.com/user-attachments/assets/3bee293a-a360-4fa4-ba4c-ee10596a684d)
+
 
 ## Выводы
-В данном коде используются срезы, с помощью которых можно выделить отдельные символы
+Данный код позволяет пользователю выбрать между двумя геометрическими фигурами (прямоугольник и треугольник), ввести необходимые параметры, и получить вычисленную площадь выбранной фигуры.
 ## Самостоятельная работа №1
 Дайте подробный комментарий для кода, написанного ниже. Комментарий нужен для каждой строчки кода, нужно описать что она делает. Не забудьте, что функции комментируются по-особенному.
+from datetime import datetime from math import sqrt
+def main(**kwargs):
+for key in kwargs.items():
+result = sqrt(key[1][0] ** 2 + key[1][1] ** 2) print(result)
+if		name	== '	main	': start_time = datetime.now() main(
+one=[10, 3],
+two=[5, 4],
+three=[15, 13],
+four=[93, 53],
+five=[133, 15]
+)
+time_costs = datetime.now() - start_time
+print(f"Время выполнения программы - {time_costs}")
+
 ```python
 print(bool(0))
 ```
